@@ -42,4 +42,4 @@ done
 
 echo "$0: Backuping up to restic"
 restic backup $SMART_BACKUP_DIR
-echo "$0: Backuped to restic"
+echo "$0: Backed up to restic"

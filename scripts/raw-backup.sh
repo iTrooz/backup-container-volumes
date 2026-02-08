@@ -18,4 +18,4 @@ EXCLUDE_FLAGS=$(find $RAW_BACKUP_DIR -name ".resticignore" -exec printf -- '--ex
 set -x
 restic backup $RAW_BACKUP_DIR --verbose --exclude-file <($SCRIPT_DIR/gen-exclusion-list.sh $RAW_BACKUP_DIR) $@ # You shouldn't need these extra args
 set +x
-echo "$0: Backuped to restic"
+echo "$0: Backed up to restic"
