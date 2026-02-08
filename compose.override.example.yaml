@@ -1,0 +1,15 @@
+services:
+  volumes-backup:
+    environment:
+      - RESTIC_REPOSITORY=s3:https://restic.example.com/server1/vm1/containers
+      - AWS_ACCESS_KEY_ID=user1
+      - AWS_SECRET_ACCESS_KEY=access_password
+      - RESTIC_PASSWORD=encryption_password
+
+      # What containers to backup
+      - POSTGRES_CONTAINERS=example-postgres
+      - MARIADB_CONTAINERS=example-mariadb
+    volumes:
+      # Add other volumes / local folders to backup here, mapping into /raw-backups/SOMETHING/
+      # Note: you willneed to mark other volumes as external
+      - /etc/nginx:/raw-backups/nginx_config:ro
