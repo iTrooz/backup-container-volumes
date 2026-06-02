@@ -1,6 +1,7 @@
 services:
   volumes-backup:
     container_name: restic-volumes-backup
+    image: ghcr.io/itrooz/restic-backup-server:latest
     build:
       dockerfile: ./Containerfile
     environment: # Complete env in compose.override.yaml
