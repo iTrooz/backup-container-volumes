@@ -1,6 +1,6 @@
 services:
   volumes-backup:
-    container_name: restic-volumes-backup
+    container_name: restic-backup
     image: ghcr.io/itrooz/restic-backup-server:latest
     restart: unless-stopped
     build:
