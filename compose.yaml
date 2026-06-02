@@ -7,4 +7,3 @@ services:
       - CRON_SCHEDULE=5 0 * * * # backup every day at 00:05
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
-      - ./scripts/:/scripts/:ro
